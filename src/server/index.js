@@ -4,6 +4,7 @@ const exphbs = require('express-handlebars');
 const express = require('express');
 const handlebars = require('handlebars');
 const yaml = require('js-yaml');
+const bodyParser = require('body-parser');
 
 const hexoDir = path.join(__dirname, '..', 'hexo');
 
@@ -38,6 +39,8 @@ const createServer = () => {
 
 const commonConfiguration = (app) => {
     // TODO: header security, etc. here
+    app.use(bodyParser.urlencoded({ extended: false }));
+    app.use(bodyParser.json());
 
     const menuDataDir = path.join(hexoDir, 'source/_data/menu.yml');
     const menuData = yaml.safeLoad(fs.readFileSync(menuDataDir, 'utf8')); // eslint-disable-line no-sync

@@ -151,6 +151,10 @@ input[type=search]:focus {
     margin-left: 1rem;
 }
 
+.nav-bar__input.mobile {
+    display: none;
+}
+
 input[type=search]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: hsla(0, 0%, 100%, .9);
 }

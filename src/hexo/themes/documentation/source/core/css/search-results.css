@@ -32,6 +32,13 @@
         display: none !important;
     }
 
+    .nav-bar__input.mobile {
+        display: block !important;
+    }
+
+    .nav-bar__input:not(.mobile) {
+        display: none !important;
+    }
 }
 
 /*

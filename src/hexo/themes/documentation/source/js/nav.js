@@ -138,4 +138,11 @@
     document.addEventListener('click', function () {
         navBar.classList.remove('show');
     });
+
+    /* Search Bar */
+    var searchInput = document.querySelector('.nav-bar__input.mobile input[name="search-input"]');
+
+    searchInput.addEventListener('focus', function() {
+        searchInput.setAttribute('placeholder', '');
+    });
 }());

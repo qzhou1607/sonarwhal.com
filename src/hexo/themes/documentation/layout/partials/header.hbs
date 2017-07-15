@@ -18,8 +18,16 @@
                 {{/each}}
             </ul>
             <div class="nav-bar__input">
-                <label for="search-input" class="visually-hidden">Search the documentation</label>
-                <input type="search" id="search-input" placeholder="Search…" aria-label="Search">
+                <form action="/search" method="POST">
+                    <label for="search-input" class="visually-hidden">Search the documentation</label>
+                    <input type="search" id="search-input" placeholder="Search…" name="search-input" aria-label="Search">
+                </form>
+            </div>
+            <div class="nav-bar__input mobile">
+                <form action="/search" method="POST">
+                    <label for="search-input" class="visually-hidden">Search the documentation</label>
+                    <input type="search" placeholder="Search…" name="search-input" aria-label="Search" required>
+                </form>
             </div>
         </nav>
         <button class="header__toggle mobile-nav-button" aria-label="Menu"></button>
